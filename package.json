@@ -1,6 +1,6 @@
 {
   "name": "@events-project/common",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Common utilities and error wrappers for events projects",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -30,6 +30,7 @@
   "dependencies": {
     "nice-grpc": "^2.0.0",
     "nice-grpc-common": "^2.0.0",
+    "typeid-js": "^1.2.0",
     "zod": "^3.24.2"
   },
   "devDependencies": {
