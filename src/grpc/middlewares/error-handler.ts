@@ -16,7 +16,7 @@ export async function* errorHandlingMiddleware<Request, Response>(
     }
     if (error instanceof ZodError) {
       const parsedError = parseZodError(error);
-      throw new InvalidArgumentError(JSON.stringify(parsedError));
+      throw new InvalidArgumentError(JSON.stringify(parsedError.details));
     }
     throw new UnknownError();
   }
