@@ -1,0 +1,37 @@
+{
+  "name": "@syllabus/common",
+  "version": "1.0.0",
+  "description": "Common utilities and error wrappers for Syllabus projects",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "grpc",
+    "nice-grpc",
+    "errors"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nice-grpc": "^2.1.0",
+    "nice-grpc-common": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "ts-node": "^10.9.1",
+    "tsup": "^8.0.2",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "nice-grpc": "^2.0.0",
+    "nice-grpc-common": "^2.0.0"
+  }
+}
