@@ -1,5 +1,5 @@
 {
-  "name": "@syllabus/common",
+  "name": "@syllabus-project/common",
   "version": "1.0.0",
   "description": "Common utilities and error wrappers for Syllabus projects",
   "main": "dist/index.js",
@@ -7,6 +7,13 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syllabus-project/node-common.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
