@@ -4,13 +4,13 @@ const zeroDecimalCurrencies = new Set([
     'VUV', 'XAF', 'XOF', 'XPF'
 ]);
 
-export function toMinorUnits(amount: number, currency: string): number {
+export function toMinorUnits(amount: string, currency: string): number {
 
     const normalizedCurrency = currency.toUpperCase();
-
+    const parsedAmount = parseFloat(amount);
     if (zeroDecimalCurrencies.has(normalizedCurrency)) {
-        return Math.round(amount);
+        return Math.round(parsedAmount);
     }
 
-    return Math.round(amount * 100);
+    return Math.round(parsedAmount * 100);
 }
